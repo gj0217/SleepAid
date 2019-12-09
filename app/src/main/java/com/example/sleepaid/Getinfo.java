@@ -1,5 +1,6 @@
 package com.example.sleepaid;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
@@ -29,8 +30,7 @@ public class Getinfo extends AsyncTask<String,Void,String> {
             String data = URLEncoder.encode("method", "UTF-8") + "=" + URLEncoder.encode(method, "UTF-8");
             data += "&" + URLEncoder.encode("keywords", "UTF-8") + "=" + URLEncoder.encode(keywords, "UTF-8");
 
-            String link = "http://10.0.2.2:8888/demo/index.php";
-            URL url = new URL(link);
+            URL url = new URL(Connect.link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());

@@ -14,6 +14,7 @@ import java.net.URLEncoder;
 
 public class Connect extends AsyncTask<String,Void,String> {
     Handler mHandler;
+    public static String link= "http://10.0.2.2:8888/demo/index.php";
 
     public Connect(Handler handler){
         this.mHandler = handler;
@@ -31,7 +32,7 @@ public class Connect extends AsyncTask<String,Void,String> {
             data += "&" + URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
             data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
 
-            String link = "http://10.0.2.2:8888/demo/index.php";
+//            String link = "http://10.0.2.2:8888/demo/index.php";
             URL url = new URL(link);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);
