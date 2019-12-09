@@ -19,7 +19,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        button = (Button) findViewById(R.id.button_register2);//id后面为上方button的id
+        button = (Button) findViewById(R.id.button_register2);
         usernameField = (EditText) findViewById(R.id.editText4);
         passwordField = (EditText) findViewById(R.id.editText2);
         confirmationField = (EditText) findViewById(R.id.editText3);
@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 case 1:
                                     Toast.makeText(RegisterActivity.this, "Register succeed.", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent();
-                                    intent.setClass(RegisterActivity.this, MainActivity.class);//this前面为当前activty名称，class前面为要跳转到得activity名称
+                                    intent.setClass(RegisterActivity.this, MainActivity.class);
                                     startActivity(intent);
                                     break;
 

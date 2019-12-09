@@ -11,9 +11,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class LoginActivity extends AppCompatActivity {
 
     private EditText usernameField,passwordField;
@@ -54,9 +51,6 @@ public class LoginActivity extends AppCompatActivity {
                 switch (msg.what) {
                     case 1:
                         Toast.makeText(LoginActivity.this, "Login succeed.", Toast.LENGTH_SHORT).show();
-//                        String res = msg.obj.toString();
-//                        res = res.substring(8,res.length());
-//                        String[] info = res.split(";");
                         Intent intent = new Intent();
                         intent.setClass(LoginActivity.this, MainActivity.class);//this前面为当前activty名称，class前面为要跳转到得activity名称
                         startActivity(intent);

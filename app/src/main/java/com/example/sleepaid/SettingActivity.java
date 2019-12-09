@@ -1,6 +1,8 @@
 package com.example.sleepaid;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,19 +13,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
 
 import static com.example.sleepaid.PlayerActivity.playBtn;
 
-public class SettingActivity extends AppCompatActivity {
+public class SettingActivity extends AppCompatActivity  {
 
     public static int mode;
-
     public static CountDownTimer timer;
     public static long second;
-    Button modeBtn, searchBtn;
-    TextView searchText;
-    private static final String TAG = "PlayerActivity";
+    Button modeBtn, searchBtn,alarmBtn;
+    TextView searchText,alarmText;
+    private static final String TAG = "SettingActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,24 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(SettingActivity.this, SleepInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+        alarmBtn = (Button) findViewById(R.id.alarmBtn);
+        alarmText = (TextView) findViewById(R.id.alarmText);
+        alarmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(SettingActivity.this, AlarmActivity.class);
+                startActivity(intent);
+            }
+        });
+        alarmText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(SettingActivity.this, AlarmActivity.class);
                 startActivity(intent);
             }
         });
@@ -169,4 +189,8 @@ public class SettingActivity extends AppCompatActivity {
             MainActivity.currentMusicIndex = 0;
         }
     }
+
+
+
+
 }

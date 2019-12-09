@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 mediaPlayer.prepare();
                 int duration = mediaPlayer.getDuration();
-                int intDuration = duration;
+//                int intDuration = duration;
 
                 long minutes = (duration / 1000) / 60;
                 long seconds = (duration / 1000) % 60;
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 String uppername = name.substring(0,1).toUpperCase()+name.substring(1);
                 music.setName(i+1 +". "+uppername);
                 music.setDuration(minutes+"m"+seconds+"s");
-                music.setIntDuration(intDuration);
+                music.setIntDuration(duration);
                 musics.add(music);
             } catch (Exception e) {
                 e.printStackTrace();

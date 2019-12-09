@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,7 +67,6 @@ public class SleepInfoActivity extends AppCompatActivity {
                         break;
 
                     default:
-//                        System.out.println(msg.obj.toString());
                         Toast.makeText(SleepInfoActivity.this, "Sorry. There is not any related information. We are working on it.", Toast.LENGTH_SHORT).show();
                         break;
                 }

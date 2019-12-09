@@ -35,8 +35,10 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".AlarmActivity">
+
+        </activity>
         <activity android:name=".PlayerActivity"
-            android:configChanges="orientation|screenSize|keyboard"
             android:parentActivityName=".MainActivity">
 
         </activity>
